@@ -28,13 +28,24 @@ public class MainView extends View {
     @Override
     public void onDraw(Canvas canvas){
         canvas.drawColor(Color.RED);
+
         Paint paint = new Paint();
+
+
+        //캔버스에서 비트맵을 그린다.
+
+        //각 drawBitmap 함수를 주석 처리하면 해당 스프라이트 이미지가 출력되지 않게 된다.
+
         canvas.drawBitmap(bitmap,
                 new Rect(0,0, (int)(bitmapWidth * scale), (int)(bitmapHeight * scale)),
                 new Rect(0,0,(int)(bitmapWidth * scale), (int)(bitmapHeight*scale)), null);
+
+
         canvas.drawBitmap(bitmap,
                 new Rect((int)(bitmapWidth * scale),0, (int)(bitmapWidth * scale  *2), (int)(bitmapHeight * scale)),
                 new Rect((int)(bitmapWidth * scale),0,(int)(bitmapWidth * scale * 2), (int)(bitmapHeight*scale)), null);
+
+
         canvas.drawBitmap(bitmap,
                 new Rect((int)(bitmapWidth * scale * 2),0, (int)(bitmapWidth * scale * 3), (int)(bitmapHeight * scale)),
                 new Rect((int)(bitmapWidth * scale * 2),0,(int)(bitmapWidth * scale * 3), (int)(bitmapHeight*scale)), null);
